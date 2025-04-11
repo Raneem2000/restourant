@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Aoboshi+One&family=Arimo:ital,wght@0,400..700;1,400..700&family=Leckerli+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+      }
+
+      .leckerli {
+        font-family: "Leckerli One", cursive;
+      }
+      .arial {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white text-xs sm:text-sm md:text-lg">
+    <!-- Section 1 -->
+    <section class="relative h-screen overflow-hidden">
+      <!-- Slides -->
+      <div
+        id="slider"
+        class="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center"
+        style="background-image: url('/images/section 1-first-slide.svg')"
+      ></div>
+      <div
+        id="slider2"
+        class="absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+        style="background-image: url('/images/section 1-second-slide.svg')"
+      ></div>
+      <!-- Navbar -->
+      <div
+        class="relative z-10 bg-black bg-opacity-10 flex justify-between items-center px-4 md:px-10 py-5 shadow-sm"
+      >
+        <div class="text-white text-xl md:text-2xl font-bold">Logo</div>
+
+        <ul class="flex divide-x divide-dotted divide-white/30">
+          <li class="px-4 md:px-8">
+            <a href="#" class="text-yellow-400 font-bold">Home</a>
+          </li>
+          <li class="px-4 md:px-8">
+            <a href="#">Menu</a>
+          </li>
+          <li class="px-4 md:px-8">
+            <a href="#">About Us</a>
+          </li>
+          <li class="px-4 md:px-8">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <button
+          class="font-bold border border-white px-4 py-1 rounded-xl text-white hover:bg-white hover:text-black transition"
+        >
+          Order Online
+        </button>
+      </div>
+
+      <!-- Center Text -->
+      <!-- Center Text: يظهر فقط مع السلايد الأول -->
+      <div
+        id="textOverlay"
+        class="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center px-4 transition-opacity duration-1000"
+      >
+        <div class="relative">
+          <div
+            class="bg-white text-black px-4 py-2 text-xl font-bold transform -rotate-2 inline-block mb-2"
+          >
+            WELCOME TO
+          </div>
+          <div
+            class="bg-yellow-400 text-black px-6 py-2 text-2xl font-extrabold transform -rotate-2 inline-block mb-2"
+          >
+            KLASIANA PIZZA
+          </div>
+          <div
+            class="bg-black text-white px-6 py-2 text-lg font-bold transform -rotate-2 inline-block mb-2"
+          >
+            WE DELIVER & CATER
+          </div>
+          <div
+            class="bg-white text-black px-4 py-1 text-sm font-bold transform -rotate-2 inline-block"
+          >
+            ORDER NOW
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2 -->
+    <section
+      class="bg-black text-center text-white py-16 px-4"
+      style="
+        background-image: url('/images/section 2-bg.jpg');
+        background-repeat: no-repeat;
+      "
+    >
+      <!-- العنوان -->
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-2">Slasiana pizza!</h2>
+      <p class="leckerli text-yellow-400 font-bold text-lg mb-6">
+        Family Café & Pizzeria
+      </p>
+
+      <!-- النص -->
+      <p
+        class="arial max-w-2xl mx-auto text-gray-300 text-sm md:text-base leading-relaxed mb-4"
+      >
+        pparently we had reached a great height in the atmosphere, for the sky
+        was a dead black, and the stars had ceased to twinkle. By the same
+        illusion which lifts the horizon of the sea to the level
+      </p>
+
+      <h3 class="text-4xl font-bold text-white mb-8">“Halal”</h3>
+      <div class="flex justify-center items-center gap-4 flex-wrap mb-10">
+        <img
+          src="/images/section 2-pizza1.svg"
+          alt="pizza1"
+          class="w-28 md:w-36 rounded-full shadow-xl"
+        />
+        <img
+          src="/images/section 2-pizza2.svg"
+          alt="pizza2"
+          class="w-24 md:w-32 rounded-full shadow-xl"
+        />
+        <img
+          src="/images/section 2-pizza3.svg"
+          alt="pizza3"
+          class="w-24 md:w-32 rounded-full shadow-xl"
+        />
+        <img
+          src="/images/section 2-pizza4.svg"
+          alt="pizza4"
+          class="w-28 md:w-36 rounded-full shadow-xl"
+        />
+      </div>
+
+      <!-- زر الطلب -->
+      <button
+        class="font-bold border border-white px-4 py-1 rounded-xl text-white hover:bg-white hover:text-black transition"
+      >
+        Order now
+      </button>
+    </section>
+
+    <!-- Section 3 -->
+    <section
+      class="flex justify-between px-4 md:px-10 items-center bg-[#FFAE00] text-white py-10"
+    >
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-2">
+          Get your pizza delivered!
+        </h2>
+        <p class="leckerli text-white text-lg mb-4 font-medium">
+          Enjoy our luscious dishes wherever you want
+        </p>
+      </div>
+      <button
+        class="font-bold border border-white px-4 py-1 rounded-xl text-white hover:bg-white hover:text-black transition"
+      >
+        Order Now
+      </button>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="relative h-[400px] md:h-[550px] w-full">
+      <!-- الخلفية -->
+      <img
+        src="/images/section 4.svg"
+        alt="Pizza Quality"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+
+      <!-- تغطية بلون داكن خفيف (Overlay) -->
+      <!-- <div class="absolute inset-0 bg-black bg-opacity-50"></div> -->
+      <!-- النص -->
+      <!-- <div
+        class="relative z-10 flex flex-col items-center justify-center text-center h-full text-white px-4"
+      >
+        <div class="mb-3">
+          <svg
+            class="w-10 h-10 mx-auto text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v18m9-9H3"
+            />
+          </svg>
+        </div>
+        <h2 class="text-2xl md:text-4xl font-bold uppercase">
+          EXCELLENTE,<br />TOP QUALITY
+        </h2>
+        <p class="mt-3 text-sm md:text-base max-w-md">
+          we put 100% of love and dedication into our dishes
+        </p>
+      </div> -->
+    </section>
+    <!-- Section 5 -->
+    <section class="bg-[#191919] text-white text-center py-16 px-4">
+      <h1 class="font-leckerli text-3xl font-semibold mb-2">
+        cast your eyes upon our enchanting menu
+      </h1>
+      <h2 class="leckerli text-sm md:text-lg mb-12">
+        Deliciousness! This is where it happens!
+      </h2>
+      <div class="flex justify-center items-end gap-6 md:gap-14 mb-6 leckerli">
+        <!-- الصورة الأولى -->
+        <div class="flex flex-col items-center">
+          <img
+            src="/images/section 5-img1.png"
+            class="w-20 md:w-24 h-16 md:h-20 object-contain"
+          />
+          <p class="text-sm text-green-400 mt-2">Pizza</p>
+          <div class="border-b border-green-400 w-full mt-2"></div>
+        </div>
+
+        <!-- الصورة الثانية -->
+        <div class="flex flex-col items-center">
+          <img
+            src="/images/section 5-img2.png"
+            class="w-20 md:w-24 h-16 md:h-20 object-contain"
+          />
+          <p class="text-sm text-white mt-2">Pasta</p>
+          <div class="border-b border-white w-full mt-2"></div>
+        </div>
+
+        <!-- الصورة الثالثة -->
+        <div class="flex flex-col items-center">
+          <img
+            src="/images/section 5-img3.png"
+            class="w-20 md:w-24 h-16 md:h-20 object-contain"
+          />
+          <p class="text-sm text-yellow-400 mt-2">Dessert</p>
+          <div class="border-b border-yellow-400 w-full mt-2"></div>
+        </div>
+
+        <!-- الصورة الرابعة -->
+        <div class="flex flex-col items-center">
+          <img
+            src="/images/section 5-img4.png"
+            class="w-20 md:w-24 h-16 md:h-20 object-contain"
+          />
+          <p class="text-sm text-blue-400 mt-2">Drink</p>
+          <div class="border-b border-blue-400 w-full mt-2"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center md:gap-14">
+        <!-- العمود الأول -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+        </div>
+
+        <!-- العمود الثاني -->
+        <div class="flex flex-col gap-6">
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center">
+              <h1 class="text-xl font-semibold">Pomegranate Shots</h1>
+              <span class="leckerli text-lg text-yellow-400">$30</span>
+            </div>
+            <div class="border-t border-dashed border-[#666666] my-3"></div>
+            <h3 class="arial text-sm text-gray-300">
+              mozzarella, cheese, tomatoes, mushrooms
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="text-xl mt-6 md:text-2xl font-bold border border-[#FFAE00] px-4 py-1 rounded-xl text-[#FFAE00] hover:bg-[#FFAE00] hover:text-[#FFAE00] transition"
+      >
+        BOOK A tABLE
+      </button>
+    </section>
+
+    <!-- Section 6 -->
+    <section
+      class="flex justify-evenly gap-2 uppercase px-4 md:px-10 items-center bg-[#FF6200] text-white py-10"
+    >
+      <div class="flex flex-col items-center gap-2">
+        <div class="leckerli text-3xl">138</div>
+        <div class="text-2xl font-bold">Menutime</div>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="leckerli text-3xl">300+</div>
+        <div class="text-2xl font-bold">VISITORS EVERYDAY</div>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="leckerli text-3xl">12</div>
+        <div class="text-2xl font-bold">YEARS OF EXPERIENCE</div>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <div class="leckerli text-3xl">100%</div>
+        <div class="text-2xl font-bold">TASTE & FUN</div>
+      </div>
+    </section>
+    <!-- Section 7 -->
+    <section class="relative h-[400px] md:h-[550px] w-full">
+      <img
+        src="/images/section 4.svg"
+        alt="Pizza Quality"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        class="relative z-10 flex flex-col gap-5 md:gap-10 items-center justify-center py-4 text-center h-full text-white px-4"
+      >
+        <h2 class="text-2xl md:text-4xl font-bold uppercase">
+          What the press says
+        </h2>
+        <p class="leckerli mt-3 text-sm md:text-base max-w-md">
+          If you like unconventional pizza this place is for you pictunesque
+          patio on a pedestrian square in the summer
+        </p>
+        <div>
+          <h2 class="text-2xl md:text-4xl font-bold uppercase">THE GUARDIAN</h2>
+          <span class="leckerli text-[#FFB30E]"> WEBSITE-EXAMPLE.COM </span>
+        </div>
+      </div>
+    </section>
+    <!-- Section 8 -->
+    <div class="relative w-full h-auto min-h-[400px]">
+      <!-- صورة الخلفية -->
+      <!-- <img
+          src="/images/section-8.svg"
+          alt="Background"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+        /> -->
+
+      <!-- طبقة التعتيم -->
+      <div class="absolute inset-0 bg-[#191919] z-0"></div>
+
+      <!-- المحتوى فوق الصورة -->
+      <div
+        class="relative z-10 flex flex-col gap-5 md:gap-10 items-center justify-center text-center text-white px-4 py-10 md:py-20"
+      >
+        <h2 class="text-3xl md:text-5xl font-bold uppercase">WHO WE ARE!</h2>
+
+        <p
+          class="font-leckerli text-[#FFAE00] text-base md:text-lg max-w-xl leading-relaxed"
+        >
+          Locally Crafted Food & Beverages Klasiana Pizza is an Italian cuisine
+          located and operated for 18 years right on 76th st.
+        </p>
+
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-6 mt-6"
+        >
+          <img
+            src="/images/section 8-img1.svg"
+            alt="Pizza"
+            class="w-36 h-36 object-contain"
+          />
+          <img
+            src="/images/section 8-img2.svg"
+            alt="Pizza"
+            class="w-36 h-36 object-contain"
+          />
+          <img
+            src="/images/section 8-img3.svg"
+            alt="Pizza"
+            class="w-36 h-36 object-contain"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Section 9 -->
+    <div class="flex flex-col md:flex-row h-screen w-full">
+      <!-- القسم الأيسر -->
+      <div
+        class="md:w-1/2 w-full bg-[#FFAE00] flex flex-col items-center justify-center gap-5 md:gap-14 py-10 px-4"
+      >
+        <h2
+          class="leckerli max-w-80 text-lg md:text-2xl text-black text-center"
+        >
+          Call +1 414-421-0000 or fill out the booking form
+        </h2>
+        <button
+          class="text-xl md:text-2xl font-bold border border-black px-4 py-1 rounded-xl text-black hover:bg-black hover:text-black transition"
+        >
+          BOOK A tABLE
+        </button>
+      </div>
+
+      <!-- القسم الأيمن -->
+      <div class="md:w-1/2 w-full relative">
+        <!-- خلفية شفافة -->
+        <div class="absolute inset-0">
+          <img
+            src="/images/section 4.svg"
+            alt="Pizza Background"
+            class="w-full h-full object-cover opacity-60"
+          />
+        </div>
+
+        <div
+          class="relative z-10 h-full flex flex-col gap-4 items-center justify-center px-6"
+        >
+          <!-- أيقونة تحديد الموقع -->
+          <a
+            href="https://www.google.com/maps?q=33.5138,36.2765"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/images/Location.png" class="w-10 h-10 object-contain" />
+          </a>
+          <!-- النص -->
+          <p
+            class="text-white text-xl md:text-3xl font-semibold text-center max-w-80 leading-relaxed"
+          >
+            5487 S 76th St, Greendale, WI 53129
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-[#191919] text-white px-6 md:px-20 py-10">
+      <!-- Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 footer-row">
+        <!-- Contact Us -->
+        <div class="footer-col">
+          <h3 class="text-lg font-bold mb-3">CONTACT US</h3>
+          <p class="text-sm text-gray-300">Main Avenue</p>
+          <p class="text-sm text-gray-300">234 Building Rose</p>
+          <p class="text-sm text-gray-300">M1 234 Manchester</p>
+          <p class="text-sm text-gray-300">restaurant@gmail.com</p>
+        </div>
+
+        <!-- Opening Hour -->
+        <div class="footer-col">
+          <h3 class="text-lg font-bold mb-3">OPENING HOUR</h3>
+          <p class="text-sm text-gray-300">Monday - Thursday</p>
+          <p class="text-sm text-gray-300 mb-2">9:00 am - 11:00 pm</p>
+          <p class="text-sm text-gray-300">Friday - Sunday</p>
+          <p class="text-sm text-gray-300">11:00 am - 10:00 pm</p>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-col">
+          <h3 class="text-lg font-bold mb-3">FOLLOW US</h3>
+          <p class="text-sm text-gray-300">Facebook</p>
+          <p class="text-sm text-gray-300">Instagram</p>
+          <p class="text-sm text-gray-300">Twitter</p>
+          <p class="text-sm text-gray-300">Pinterest</p>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h3 class="text-lg font-bold mb-3">NEWSLETTER</h3>
+          <input
+            type="email"
+            placeholder="ENTER YOUR EMAIL..."
+            class="w-full px-3 py-2 text-sm rounded-md bg-white text-black outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+          <a
+            href="#"
+            class="inline-block mt-3 text-sm font-semibold text-yellow-400 hover:underline"
+          >
+            SUBSCRIBE
+          </a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="mt-10 text-center text-gray-400 text-sm">
+        Copyright &copy; 2025
+        <span class="text-yellow-400 font-semibold">Restourant</span> All rights
+        Reserved.
+      </div>
+    </footer>
+  </body>
+  <!-- JavaScript -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    let currentSlide = 0;
+    const slides = [
+      document.getElementById("slider"),
+      document.getElementById("slider2"),
+    ];
+    const textOverlay = document.getElementById("textOverlay");
+
+    setInterval(() => {
+      slides.forEach((slide) => slide.classList.add("opacity-0"));
+
+      // إخفاء النص
+      textOverlay.classList.add("opacity-0");
+
+      // عرض السلايد الحالي
+      slides[currentSlide].classList.remove("opacity-0");
+
+      // إذا كانت السلايد الحالية هي الأولى، أظهر النص
+      if (currentSlide === 0) {
+        textOverlay.classList.remove("opacity-0");
+      }
+
+      currentSlide = (currentSlide + 1) % slides.length;
+    }, 3000);
+  </script>
+</html>
