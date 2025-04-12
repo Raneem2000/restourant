@@ -1,41 +1,57 @@
-/* تنسيق الزر */
-button {
-  position: relative;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
 }
 
-/* تأثير هوفر */
-button:hover {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 10px rgba(255, 174, 0, 0.5);
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
 }
 
-/* إضافة تأثير خلفية عند التمرير */
-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffae00;
-  border-radius: 30px;
-  transform: scaleX(0);
-  transform-origin: top right;
-  transition: transform 0.3s ease;
+.animate-slide-down {
+  animation: slideDown 1s ease-out forwards;
 }
 
-/* تفعيل التأثير عند التمرير */
-button:hover::before {
-  transform: scaleX(1);
-  transform-origin: top left;
+.animate-slide-up {
+  animation: slideUp 1s ease-out forwards;
+}
+
+#slider,
+#slider2,
+#textOverlay {
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.7); */
+  }
+  50% {
+    transform: scale(1.1);
+    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 40px rgba(255, 255, 255, 1); */
+  }
+  100% {
+    transform: scale(1);
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.7); */
+  }
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2s infinite ease-in-out;
 }

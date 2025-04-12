@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,43 +32,64 @@
       <!-- Slides -->
       <div
         id="slider"
-        class="absolute inset-0 transition-opacity duration-1000 bg-cover bg-center"
+        class="absolute inset-0 opacity-100 transition-all duration-1000 bg-cover bg-center"
         style="background-image: url('images/section1-first-slide.svg')"
       ></div>
       <div
         id="slider2"
-        class="absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center"
+        class="absolute inset-0 opacity-0 transition-all duration-1000 bg-cover bg-center"
         style="background-image: url('images/section1-second-slide.svg')"
       ></div>
+
       <div id="header"></div>
 
       <!-- Center Text for slide 1 -->
+
       <div
-        id="textOverlay"
-        class="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center px-4 transition-opacity duration-1000"
+        class="relative z-10 text-white h-full flex flex-col justify-center items-center"
       >
-        <div class="relative">
-          <div
-            class="bg-white text-black px-4 py-2 text-xl font-bold transform -rotate-2 inline-block mb-2"
-          >
-            WELCOME TO
-          </div>
-          <div
-            class="bg-yellow-400 text-black px-6 py-2 text-2xl font-extrabold transform -rotate-2 inline-block mb-2"
-          >
-            KLASIANA PIZZA
-          </div>
-          <div
-            class="bg-black text-white px-6 py-2 text-lg font-bold transform -rotate-2 inline-block mb-2"
-          >
-            WE DELIVER & CATER
-          </div>
-          <div
-            class="bg-white text-black px-4 py-1 text-sm font-bold transform -rotate-2 inline-block"
-          >
-            ORDER NOW
+        <img
+          src="images/1-white.png"
+          alt="Top Decoration"
+          class="absolute top-10 left-1/2 transform -translate-x-1/2 z-0 w-48 animate-slide-down"
+        />
+
+        <div
+          id="textOverlay"
+          class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 transition-opacity duration-1000"
+        >
+          <div class="relative">
+            <div
+              class="absolute top-10 left-4 bg-white text-black px-6 py-3 text-xl font-bold transform -rotate-2 inline-block mb-2 whitespace-nowrap"
+            >
+              WELCOME TO
+            </div>
+
+            <div
+              class="absolute top-10 right-4 bg-yellow-400 text-black px-8 py-3 text-2xl font-extrabold transform -rotate-2 inline-block mb-2 whitespace-nowrap"
+            >
+              KLASIANA PIZZA
+            </div>
+
+            <div
+              class="absolute bottom-10 left-4 bg-black text-white px-8 py-3 text-lg font-bold transform -rotate-2 inline-block mb-2 whitespace-nowrap"
+            >
+              WE DELIVER & CATER
+            </div>
           </div>
         </div>
+
+        <div
+          class="absolute bottom-40 transform -translate-x-1/2 cursor-pointer bg-white text-black font-bold px-2 py-2 text-2xl font-bold transform -rotate-2 inline-block whitespace-nowrap transition-all duration-300 ease-in-out hover:bg-yellow-500 hover:text-white hover:scale-105 hover:shadow-lg z-10 animate-pulseGlow"
+        >
+          ORDER NOW
+        </div>
+
+        <img
+          src="images/2-white.png"
+          alt="Bottom Decoration"
+          class="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-0 w-48 animate-slide-up"
+        />
       </div>
     </section>
     <!-- Section2 -->
@@ -418,61 +439,7 @@
         </div>
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="bg-[#191919] text-white px-6 md:px-20 py-10">
-      <!-- Footer Columns -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 footer-row">
-        <!-- Contact Us -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">CONTACT US</h3>
-          <p class="text-gray-300">Main Avenue</p>
-          <p class="text-gray-300">234 Building Rose</p>
-          <p class="text-gray-300">M1 234 Manchester</p>
-          <p class="text-gray-300">restaurant@gmail.com</p>
-        </div>
-
-        <!-- Opening Hour -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">OPENING HOUR</h3>
-          <p class="text-gray-300">Monday - Thursday</p>
-          <p class="text-gray-300 mb-2">9:00 am - 11:00 pm</p>
-          <p class="text-gray-300">Friday - Sunday</p>
-          <p class="text-gray-300">11:00 am - 10:00 pm</p>
-        </div>
-
-        <!-- Follow Us -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">FOLLOW US</h3>
-          <p class="text-gray-300">Facebook</p>
-          <p class="text-gray-300">Instagram</p>
-          <p class="text-gray-300">Twitter</p>
-          <p class="text-gray-300">Pinterest</p>
-        </div>
-
-        <!-- Newsletter -->
-        <div>
-          <h3 class="text-2xl font-bold mb-3">NEWSLETTER</h3>
-          <input
-            type="email"
-            placeholder="ENTER YOUR EMAIL..."
-            class="w-full px-3 py-2 text-sm rounded-md bg-white text-black outline-none focus:ring-2 focus:ring-yellow-400"
-          />
-          <a
-            href="#"
-            class="inline-block mt-3 text-sm font-semibold text-yellow-400 hover:underline"
-          >
-            SUBSCRIBE
-          </a>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="mt-10 text-center text-gray-400 text-sm">
-        Copyright &copy; 2025
-        <span class="text-yellow-400 font-semibold">Restourant</span> All rights
-        Reserved.
-      </div>
-    </footer>
+    <div id="footer"></div>
   </body>
   <!-- JavaScript -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -485,20 +452,50 @@
     ];
     const textOverlay = document.getElementById("textOverlay");
 
+    // Array to hold the different directions of the slide animations
+    const directions = [
+      "translate-x-full", // from right
+      "-translate-x-full", // from left
+      "translate-y-full", // from bottom
+      "-translate-y-full", // from top
+    ];
+
     setInterval(() => {
-      slides.forEach((slide) => slide.classList.add("opacity-0"));
+      // Loop through the slides and apply the fade-out effect with direction shift
+      slides.forEach((slide) => {
+        slide.classList.add("opacity-0", ...directions); // Fade out and shift in any direction
+        slide.classList.remove(
+          "opacity-100",
+          "translate-x-0",
+          "translate-y-0",
+          "scale-100"
+        );
+      });
 
       // إخفاء النص
-      textOverlay.classList.add("opacity-0");
+      textOverlay.classList.add(
+        "opacity-0",
+        "transition-opacity",
+        "duration-1000"
+      );
 
-      // عرض السلايد الحالي
-      slides[currentSlide].classList.remove("opacity-0");
+      // تحديد السلايد الحالي
+      slides[currentSlide].classList.remove("opacity-0", ...directions);
+      slides[currentSlide].classList.add(
+        "opacity-100",
+        "scale-100",
+        "transition-all",
+        "duration-1000",
+        "translate-x-0",
+        "translate-y-0"
+      );
 
       // إذا كانت السلايد الحالية هي الأولى، أظهر النص
       if (currentSlide === 0) {
         textOverlay.classList.remove("opacity-0");
       }
 
+      // تحديث السلايد التالي
       currentSlide = (currentSlide + 1) % slides.length;
     }, 3000);
   </script>
@@ -513,7 +510,7 @@
       }
 
       loadComponent("header", "components/header.html");
-      // loadComponent("footer", "components/footer.html");
+      loadComponent("footer", "components/footer.html");
     });
   </script>
 </html>
