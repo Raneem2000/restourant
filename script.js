@@ -3,7 +3,7 @@ function restartAnimation(elementId, animationClass) {
   if (!el) return;
 
   el.classList.remove(animationClass);
-  void el.offsetWidth;
+  void el.offsetWidth; // force reflow to restart the animation
   el.classList.add(animationClass);
 }
 
@@ -18,6 +18,7 @@ const textOverlays = [
 ];
 
 setInterval(() => {
+  // تغيير السلايد
   slides.forEach((slide) => slide.classList.add("opacity-0"));
   slides.forEach((slide) => slide.classList.remove("opacity-100"));
 
@@ -32,10 +33,20 @@ setInterval(() => {
   textOverlays[currentSlide].classList.remove("hidden");
   textOverlays[currentSlide].classList.add("block");
 
+  // إعادة تشغيل الأنيميشن على النصوص
   restartAnimation("slideText1", "animate-crazy-flip");
   restartAnimation("slideText2", "animate-crazy-flip");
+  restartAnimation("slideText3", "animate-crazy-flip");
+  restartAnimation("slideText4", "animate-crazy-flip");
 
+  // تغيير السلايد
   currentSlide = (currentSlide + 1) % slides.length;
+}, 3000);
+
+// إعادة تشغيل الأنيميشن كل 3 ثوانٍ بشكل مستقل
+setInterval(() => {
+  restartAnimation("slideText1", "animate-crazy-flip");
+  restartAnimation("slideText2", "animate-crazy-flip");
 }, 3000);
 
 // header and footer
