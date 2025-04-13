@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Port+Lligat+Slab&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+      }
+
+      .leckerli {
+        font-family: "Leckerli One", cursive;
+      }
+      .port-slab {
+        font-family: "Port Lligat Slab", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white text-sm sm:text-lg md:text-xl w-full">
+    <section class="relative h-screen overflow-hidden">
+      <!-- Slides -->
+      <div
+        id="slider"
+        class="absolute inset-0 opacity-100 transition-all duration-1000 bg-cover bg-center"
+        style="background-image: url('images/section1-first-slide.svg')"
+      ></div>
+
+      <div
+        id="slider2"
+        class="absolute inset-0 opacity-0 transition-all duration-1000 bg-cover bg-center"
+        style="background-image: url('images/section1-second-slide.jpg')"
+      ></div>
+      <div id="header"></div>
+
+      <div
+        class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4"
+      >
+        <img
+          id="slideText1"
+          src="images/1-white.png"
+          alt="Top Decoration"
+          class="absolute top-6 transform -translate-x-1/2 z-0 w-48 animate-crazy-flip"
+        />
+
+        <!-- Text for Slide 1 -->
+        <div
+          id="textOverlay"
+          class="absolute inset-0 flex flex-col justify-center items-center text-5xl space-y-2 transition-opacity duration-1000"
+        >
+          <div class="relative animate-slide-in-left">
+            <img src="images/Rectangle-white-big.png" class="h-24 w-full" />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="text-black font-bold">Welcome To</p>
+            </div>
+          </div>
+
+          <div class="relative animate-slide-in-right">
+            <img src="images/Rectangle-orange.png" class="h-24 w-full" />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="text-black font-bold">KLASIANA PIZZA</p>
+            </div>
+          </div>
+          <div class="relative animate-slide-in-bottom">
+            <img src="images/Rectangle-black.png" class="h-24 w-full" />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="font-bold">WE DELIVER & CATER</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text for Slide 2 -->
+        <div
+          id="textOverlay2"
+          class="absolute inset-0 flex flex-col justify-center items-center text-5xl space-y-2 transition-opacity duration-1000 hidden"
+        >
+          <div class="relative animate-slide-in-left">
+            <img src="images/Rectangle-white-big.png" class="h-24 w-full" />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="text-black font-bold">BRINGING PEOPLE</p>
+            </div>
+          </div>
+          <div class="relative animate-slide-in-right">
+            <img src="images/Rectangle-orange.png" class="h-24 w-full" />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="text-black font-bold">with a slice of tasty pizza!</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-28 left-1/2 transform -translate-x-1/2 z-10"
+        >
+          <div
+            class="relative cursor-pointer hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="images/Rectangle-order-now.png"
+              alt="Order Button"
+              class="w-full h-20 object-cover"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-black font-bold text-4xl -rotate-2 hover:text-[#FFAE00] animate-pulseGlow"
+            >
+              ORDER NOW
+            </p>
+          </div>
+        </div>
+
+        <img
+          id="slideText2"
+          src="images/2-white.png"
+          alt="Bottom Decoration"
+          class="absolute bottom-16 transform -translate-x-1/2 z-0 w-48 animate-crazy-flip"
+        />
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+  <!-- JavaScript -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="/script.js"></script>
+</html>
