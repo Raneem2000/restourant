@@ -1,32 +1,29 @@
-@keyframes slideDown {
+@keyframes crazyFlipInY {
   from {
-    transform: translate(-50%, -100%);
+    transform: perspective(1000px) rotateY(1080deg);
     opacity: 0;
   }
   to {
-    transform: translate(-50%, 0);
+    transform: perspective(1000px) rotateY(0);
     opacity: 1;
   }
 }
 
-@keyframes slideUp {
-  from {
-    transform: translate(-50%, 100%);
-    opacity: 0;
+.animate-crazy-flip {
+  animation: crazyFlipInY 1.5s ease-out forwards;
+}
+function restartAnimation(elementId, animationClass) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+  
+    el.classList.remove(animationClass);
+  
+    // لإجبار إعادة التحديث
+    void el.offsetWidth;
+  
+    el.classList.add(animationClass);
   }
-  to {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
-}
-
-.animate-slide-down {
-  animation: slideDown 1s ease-out forwards;
-}
-
-.animate-slide-up {
-  animation: slideUp 1s ease-out forwards;
-}
+  
 
 #slider,
 #slider2,
@@ -63,4 +60,47 @@
 }
 .menu-item.active .menu-border {
   border-color: var(--active-color);
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-bottom {
+  animation: slide-in-bottom 1s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out forwards;
 }

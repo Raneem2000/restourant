@@ -1,49 +1,40 @@
+function restartAnimation(elementId, animationClass) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+
+  el.classList.remove(animationClass);
+  void el.offsetWidth;
+  el.classList.add(animationClass);
+}
+
 let currentSlide = 0;
 const slides = [
   document.getElementById("slider"),
   document.getElementById("slider2"),
 ];
-const textOverlay = document.getElementById("textOverlay");
-
-// Array to hold the different directions of the slide animations
-const directions = [
-  "translate-x-full", // from right
-  "-translate-x-full", // from left
-  "translate-y-full", // from bottom
-  "-translate-y-full", // from top
+const textOverlays = [
+  document.getElementById("textOverlay"),
+  document.getElementById("textOverlay2"),
 ];
 
 setInterval(() => {
-  // Loop through the slides and apply the fade-out effect with direction shift
-  slides.forEach((slide) => {
-    slide.classList.add("opacity-0", ...directions); // Fade out and shift in any direction
-    slide.classList.remove(
-      "opacity-100",
-      "translate-x-0",
-      "translate-y-0",
-      "scale-100"
-    );
+  slides.forEach((slide) => slide.classList.add("opacity-0"));
+  slides.forEach((slide) => slide.classList.remove("opacity-100"));
+
+  textOverlays.forEach((txt) => {
+    txt.classList.add("hidden");
+    txt.classList.remove("block");
   });
 
-  textOverlay.classList.add("opacity-0", "transition-opacity", "duration-1000");
+  slides[currentSlide].classList.remove("opacity-0");
+  slides[currentSlide].classList.add("opacity-100");
 
-  // تحديد السلايد الحالي
-  slides[currentSlide].classList.remove("opacity-0", ...directions);
-  slides[currentSlide].classList.add(
-    "opacity-100",
-    "scale-100",
-    "transition-all",
-    "duration-1000",
-    "translate-x-0",
-    "translate-y-0"
-  );
+  textOverlays[currentSlide].classList.remove("hidden");
+  textOverlays[currentSlide].classList.add("block");
 
-  // إذا كانت السلايد الحالية هي الأولى، أظهر النص
-  if (currentSlide === 0) {
-    textOverlay.classList.remove("opacity-0");
-  }
+  restartAnimation("slideText1", "animate-crazy-flip");
+  restartAnimation("slideText2", "animate-crazy-flip");
 
-  // تحديث السلايد التالي
   currentSlide = (currentSlide + 1) % slides.length;
 }, 3000);
 
@@ -72,7 +63,7 @@ function animateNumbers() {
 
   numbers.forEach((item) => {
     let currentValue = 0;
-    const step = Math.ceil(item.endValue / 100); // Number of steps
+    const step = Math.ceil(item.endValue / 100);
 
     const interval = setInterval(() => {
       currentValue += step;
@@ -111,9 +102,77 @@ menuItems.forEach((item) => {
       el.style.borderColor = "white";
     });
     border.style.borderColor = colors[category];
-    border.style.borderWidth = "1px";
 
     const section = document.querySelector(`#content-${category}`);
     if (section) section.classList.remove("hidden");
   });
 });
+
+// data menu
+const menuData = {
+  pizza: [
+    {
+      name: "Pepperoni Pizza",
+      price: 25,
+      ingredients: "pepperoni, cheese, sauce",
+    },
+    { name: "Veggie Pizza", price: 22, ingredients: "peppers, olives, cheese" },
+  ],
+  pasta: [
+    {
+      name: "Spaghetti",
+      price: 18,
+      ingredients: "tomato sauce, basil, parmesan",
+    },
+    { name: "Alfredo", price: 20, ingredients: "cream, chicken, mushroom" },
+  ],
+  dessert: [
+    { name: "Tiramisu", price: 10, ingredients: "coffee, mascarpone, cocoa" },
+    { name: "Cheesecake", price: 9, ingredients: "cream cheese, biscuit base" },
+  ],
+  drink: [
+    { name: "Lemonade", price: 5, ingredients: "lemon, sugar, mint" },
+    { name: "Iced Tea", price: 6, ingredients: "black tea, ice, lemon" },
+  ],
+};
+
+const items = document.querySelectorAll(".menu-item");
+const contentDiv = document.getElementById("menu-content");
+
+items.forEach((item) => {
+  item.addEventListener("click", () => {
+    items.forEach((el) => el.classList.remove("active"));
+    item.classList.add("active");
+
+    const category = item.getAttribute("data-category");
+    renderMenuItems(category);
+  });
+});
+
+function renderMenuItems(category) {
+  const items = menuData[category];
+  contentDiv.innerHTML = "";
+
+  const columns = [[], []];
+
+  items.forEach((item, index) => {
+    const html = `
+      <div class="w-[300px] mx-auto">
+        <div class="flex justify-between items-center">
+          <h1 class="text-3xl font-bold">${item.name}</h1>
+          <span class="leckerli text-lg text-yellow-400">$${item.price}</span>
+        </div>
+        <div class="border-t border-dashed border-[#666666] my-3"></div>
+        <h3 class="port-slab text-xs text-left">${item.ingredients}</h3>
+      </div>
+    `;
+    columns[index % 2].push(html);
+  });
+
+  contentDiv.innerHTML = `
+    <div class="flex flex-col gap-8">${columns[0].join("")}</div>
+    <div class="flex flex-col gap-8">${columns[1].join("")}</div>
+  `;
+}
+
+renderMenuItems("pizza");
