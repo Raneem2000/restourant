@@ -55,3 +55,12 @@
 .animate-pulseGlow {
   animation: pulseGlow 2s infinite ease-in-out;
 }
+
+/* for menu changes border color */
+.menu-border {
+  border-color: white;
+  transition: all 0.3s ease;
+}
+.menu-item.active .menu-border {
+  border-color: var(--active-color);
+}

@@ -6,11 +6,10 @@
     <title>Restaurant</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Aoboshi+One&family=Arimo:ital,wght@0,400..700;1,400..700&family=Leckerli+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prociono&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Port+Lligat+Slab&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -21,8 +20,8 @@
       .leckerli {
         font-family: "Leckerli One", cursive;
       }
-      .arial {
-        font-family: Arial, sans-serif;
+      .port-slab {
+        font-family: "Port Lligat Slab", sans-serif;
       }
     </style>
   </head>
@@ -100,20 +99,20 @@
         background-repeat: no-repeat;
       "
     >
-      <h2 class="text-3xl md:text-6xl font-extrabold mb-2">Slasiana pizza!</h2>
+      <h2 class="text-3xl md:text-7xl font-extrabold mb-2">Slasiana pizza!</h2>
       <p class="leckerli text-[#FFAE00] font-bold text-lg mb-6">
         Family Café & Pizzeria
       </p>
 
       <p
-        class="arial max-w-lg mx-auto text-[#A5A5A5] text-sm md:text-base leading-relaxed mb-4"
+        class="port-slab max-w-lg mx-auto text-[#A5A5A5] text-sm md:text-lg leading-relaxed mb-4"
       >
         pparently we had reached a great height in the atmosphere, for the sky
         was a dead black, and the stars had ceased to twinkle. By the same
         illusion which lifts the horizon of the sea to the level
       </p>
 
-      <h3 class="text-6xl font-bold text-white mb-8 tracking-widest">
+      <h3 class="text-7xl font-bold text-white mb-8 tracking-widest">
         “Halal”
       </h3>
       <div class="flex justify-center items-center gap-4 flex-wrap mb-10">
@@ -166,56 +165,99 @@
     </section>
 
     <!-- Section4 -->
-    <section class="relative h-[400px] md:h-[550px] w-full">
+    <section class="relative h-[400px] md:h-screen w-full">
       <img
-        src="images/section4.svg"
+        src="images/section4.jpg"
         alt="Pizza Quality"
         class="absolute inset-0 w-full h-full object-cover"
       />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        class="relative z-10 flex flex-col gap-5 md:gap-16 items-center justify-center py-4 text-center h-full text-white px-4"
+      >
+        <img
+          src="images/1-white.png"
+          alt="Top Decoration"
+          class="absolute top-10 left-1/2 transform -translate-x-1/2 z-0 w-48 animate-slide-down"
+        />
+
+        <div>
+          <h2 class="text-5xl font-semibold uppercase">
+            EXCELLENTE, <br />
+            TOP QUALITY
+          </h2>
+        </div>
+        <p class="leckerli mt-3 text-2xl">
+          we put 100% of love and dedication into our dishes
+        </p>
+        <img
+          src="images/2-white.png"
+          alt="Bottom Decoration"
+          class="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-0 w-48 animate-slide-up"
+        />
+      </div>
     </section>
     <!-- Section5 -->
-    <section class="bg-[#191919] text-white text-center py-16 px-4">
-      <h1 class="font-leckerli text-4xl font-semibold mb-3">
+    <section
+      class="bg-cover bg-center text-white text-center py-16 px-4"
+      style="background-image: url('images/section5.jpg')"
+    >
+      <h1 class="font-leckerli text-5xl font-semibold mb-3">
         cast your eyes upon our enchanting menu
       </h1>
-      <h2 class="leckerli text-sm md:text-lg">
+      <h2 class="leckerli text-lg md:text-lg">
         Deliciousness! This is where it happens!
       </h2>
-      <div class="flex justify-center items-end gap-6 md:gap-24 my-4 leckerli">
-        <div class="flex flex-col items-center">
+      <div
+        id="menu-categories"
+        class="flex justify-center items-end gap-6 md:gap-24 my-4 leckerli"
+      >
+        <div
+          class="menu-item flex flex-col items-center cursor-pointer"
+          data-category="pizza"
+        >
           <img
             src="images/section5-img1.png"
             class="w-20 md:w-24 h-16 md:h-20 object-contain"
           />
-          <p class="text-sm text-green-400 mt-2">Pizza</p>
-          <div class="border-b border-green-400 w-full mt-2"></div>
+          <p class="text-lg mt-2 text-[#01D220]">Pizza</p>
+          <div class="menu-border border-b w-full mt-2"></div>
         </div>
 
-        <div class="flex flex-col items-center">
+        <div
+          class="menu-item flex flex-col items-center cursor-pointer"
+          data-category="pasta"
+        >
           <img
             src="images/section5-img2.png"
             class="w-20 md:w-24 h-16 md:h-20 object-contain"
           />
-          <p class="text-sm text-white mt-2">Pasta</p>
-          <div class="border-b border-white w-full mt-2"></div>
+          <p class="text-lg mt-2 text-[#F2D3FF]">Pasta</p>
+          <div class="menu-border border-b w-full mt-2"></div>
         </div>
 
-        <div class="flex flex-col items-center">
+        <div
+          class="menu-item flex flex-col items-center cursor-pointer"
+          data-category="dessert"
+        >
           <img
             src="images/section5-img3.png"
             class="w-20 md:w-36 h-16 md:h-30 object-contain"
           />
-          <p class="text-sm text-yellow-400 mt-2">Dessert</p>
-          <div class="border-b border-yellow-400 w-full mt-2"></div>
+          <p class="text-lg mt-2 text-[#C6A402]">Dessert</p>
+          <div class="menu-border border-b w-full mt-2"></div>
         </div>
 
-        <div class="flex flex-col items-center">
+        <div
+          class="menu-item flex flex-col items-center cursor-pointer"
+          data-category="drink"
+        >
           <img
             src="images/section5-img4.png"
             class="w-20 md:w-24 h-16 md:h-20 object-contain"
           />
-          <p class="text-sm text-blue-400 mt-2">Drink</p>
-          <div class="border-b border-blue-400 w-full mt-2"></div>
+          <p class="text-lg mt-2 text-[#4F8BFF]">Drink</p>
+          <div class="menu-border border-b w-full mt-2"></div>
         </div>
       </div>
 
@@ -223,44 +265,44 @@
         <div class="flex flex-col gap-8">
           <div class="w-[300px] mx-auto">
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
 
           <div>
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
 
           <div>
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
 
           <div>
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
@@ -269,44 +311,44 @@
         <div class="flex flex-col gap-8">
           <div class="w-[300px] mx-auto">
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
 
           <div>
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
 
           <div>
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
 
           <div>
             <div class="flex justify-between items-center">
-              <h1 class="text-2xl font-bold">Pomegranate Shots</h1>
+              <h1 class="text-3xl font-bold">Pomegranate Shots</h1>
               <span class="leckerli text-lg text-yellow-400">$30</span>
             </div>
             <div class="border-t border-dashed border-[#666666] my-3"></div>
-            <h3 class="arial text-xs text-left">
+            <h3 class="port-slab text-xs text-left">
               mozzarella, cheese, tomatoes, mushrooms
             </h3>
           </div>
@@ -314,7 +356,7 @@
       </div>
 
       <button
-        class="text-xl mt-6 md:text-2xl font-bold border border-[#FFAE00] px-4 py-1 rounded-xl text-[#FFAE00] hover:bg-[#FFAE00] hover:text-black transition"
+        class="text-xl mt-6 md:text-3xl font-bold border border-[#FFAE00] px-4 py-1 rounded-xl text-[#FFAE00] hover:bg-[#FFAE00] hover:text-black transition"
       >
         EXPLORE FULL MENU
       </button>
@@ -325,43 +367,41 @@
       class="flex justify-between gap-2 uppercase px-12 md:px-32 items-center bg-[#FF6200] text-white py-10"
     >
       <div class="flex flex-col items-center gap-2">
-        <div class="leckerli text-3xl">138</div>
+        <div class="leckerli text-3xl" id="number1">0</div>
         <div class="text-2xl font-semibold">Menutime</div>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="leckerli text-3xl">300+</div>
+        <div class="leckerli text-3xl" id="number2">0</div>
         <div class="text-2xl font-semibold">VISITORS EVERYDAY</div>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="leckerli text-3xl">12</div>
+        <div class="leckerli text-3xl" id="number3">0</div>
         <div class="text-2xl font-semibold">YEARS OF EXPERIENCE</div>
       </div>
       <div class="flex flex-col items-center gap-2">
-        <div class="leckerli text-3xl">100%</div>
+        <div class="leckerli text-3xl" id="number4">0</div>
         <div class="text-2xl font-semibold">TASTE & FUN</div>
       </div>
     </section>
     <!-- Section7 -->
-    <section class="relative h-[400px] md:h-[550px] w-full">
+    <section class="relative h-[400px] md:h-screen w-full">
       <img
-        src="images/section4.svg"
+        src="images/section7.jpg"
         alt="Pizza Quality"
-        class="absolute inset-0 w-full h-full object-cover"
+        class="absolute inset-0 w-full h-full"
       />
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-75"></div>
       <div
-        class="relative z-10 flex flex-col gap-5 md:gap-16 items-center justify-center py-4 text-center h-full text-white px-4"
+        class="relative z-10 flex flex-col gap-5 md:gap-28 items-center justify-center py-4 text-center h-full text-white px-4"
       >
-        <h2 class="text-2xl md:text-6xl font-bold uppercase">
-          What the press says
-        </h2>
-        <p class="leckerli mt-3 max-w-sm">
+        <h2 class="text-2xl md:text-7xl font-bold">What the press says</h2>
+        <p class="port-slab mt-3 max-w-sm text-sm md:text-lg">
           If you like unconventional pizza this place is for you pictunesque
           patio on a pedestrian square in the summer
         </p>
         <div>
-          <h2 class="text-3xl font-semibold uppercase">THE GUARDIAN</h2>
-          <span class="leckerli text-[#FFB30E] text-xs">
+          <h2 class="text-4xl font-semibold uppercase">THE GUARDIAN</h2>
+          <span class="leckerli text-[#FFB30E] text-sm">
             WEBSITE-EXAMPLE.COM
           </span>
         </div>
@@ -369,22 +409,21 @@
     </section>
     <!-- Section8 -->
     <div class="relative w-full h-auto min-h-[400px]">
-      <!-- صورة الخلفية -->
-      <!-- <img
-          src="images/section-8.svg"
-          alt="Background"
-          class="absolute inset-0 w-full h-full object-cover z-0"
-        /> -->
+      <img
+        src="images/section8.jpg"
+        alt="Background"
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-      <div class="absolute inset-0 bg-[#191919] z-0"></div>
+      <div class="absolute inset-0 bg-[#191919] bg-opacity-50 z-0"></div>
 
       <div
         class="relative z-10 flex flex-col gap-5 md:gap-10 items-center justify-center text-center text-white px-4 py-10 md:py-20"
       >
-        <h2 class="text-3xl md:text-6xl font-bold uppercase">WHO WE ARE!</h2>
+        <h2 class="text-3xl md:text-7xl font-bold uppercase">WHO WE ARE!</h2>
 
         <p
-          class="leckerli text-[#FFAE00] text-base md:text-lg max-w-sm leading-relaxed"
+          class="port-slab text-[#FFAE00] text-sm md:text-lg max-w-sm leading-relaxed"
         >
           Locally Crafted Food & Beverages Klasiana Pizza is an Italian cuisine
           located and operated for 18 years right on 76th st.
@@ -428,9 +467,9 @@
         </button>
       </div>
       <div class="md:w-1/2 w-full relative h-full">
-        <div class="z-10 flex flex-col items-center justify-center px-1 h-full">
+        <div class="z-10 flex flex-col items-center justify-center h-full">
           <iframe
-            class="w-full h-full rounded-lg border-2 border-yellow-400"
+            class="w-full h-full"
             src="https://www.google.com/maps?q=41.9028,12.4964&hl=es;z=14&output=embed"
             allowfullscreen=""
             loading="lazy"
@@ -444,73 +483,5 @@
   <!-- JavaScript -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    let currentSlide = 0;
-    const slides = [
-      document.getElementById("slider"),
-      document.getElementById("slider2"),
-    ];
-    const textOverlay = document.getElementById("textOverlay");
-
-    // Array to hold the different directions of the slide animations
-    const directions = [
-      "translate-x-full", // from right
-      "-translate-x-full", // from left
-      "translate-y-full", // from bottom
-      "-translate-y-full", // from top
-    ];
-
-    setInterval(() => {
-      // Loop through the slides and apply the fade-out effect with direction shift
-      slides.forEach((slide) => {
-        slide.classList.add("opacity-0", ...directions); // Fade out and shift in any direction
-        slide.classList.remove(
-          "opacity-100",
-          "translate-x-0",
-          "translate-y-0",
-          "scale-100"
-        );
-      });
-
-      // إخفاء النص
-      textOverlay.classList.add(
-        "opacity-0",
-        "transition-opacity",
-        "duration-1000"
-      );
-
-      // تحديد السلايد الحالي
-      slides[currentSlide].classList.remove("opacity-0", ...directions);
-      slides[currentSlide].classList.add(
-        "opacity-100",
-        "scale-100",
-        "transition-all",
-        "duration-1000",
-        "translate-x-0",
-        "translate-y-0"
-      );
-
-      // إذا كانت السلايد الحالية هي الأولى، أظهر النص
-      if (currentSlide === 0) {
-        textOverlay.classList.remove("opacity-0");
-      }
-
-      // تحديث السلايد التالي
-      currentSlide = (currentSlide + 1) % slides.length;
-    }, 3000);
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      function loadComponent(id, file) {
-        fetch(file)
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById(id).innerHTML = data;
-          });
-      }
-
-      loadComponent("header", "components/header.html");
-      loadComponent("footer", "components/footer.html");
-    });
-  </script>
+  <script src="/script.js"></script>
 </html>
