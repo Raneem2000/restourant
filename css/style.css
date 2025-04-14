@@ -2,17 +2,13 @@
   --primary-color: #ffae00;
 }
 
-/* إضافة اللون الأصفر على الرابط النشط */
 .text-active {
   color: var(--primary-color);
 }
 
-/* اللون الافتراضي */
 .text-white {
   color: white;
 }
-
-/* يمكنك أيضًا تحديد أنماط أخرى للكلاس النشط إذا أردت */
 
 @keyframes crazyFlipInY {
   from {
@@ -38,18 +34,12 @@
 @keyframes pulseGlow {
   0% {
     transform: scale(1);
-    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
-      0 0 20px rgba(255, 255, 255, 0.7); */
   }
   50% {
     transform: scale(1.1);
-    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
-      0 0 40px rgba(255, 255, 255, 1); */
   }
   100% {
     transform: scale(1);
-    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
-      0 0 20px rgba(255, 255, 255, 0.7); */
   }
 }
 
