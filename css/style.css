@@ -1,3 +1,19 @@
+:root {
+  --primary-color: #ffae00;
+}
+
+/* إضافة اللون الأصفر على الرابط النشط */
+.text-active {
+  color: var(--primary-color);
+}
+
+/* اللون الافتراضي */
+.text-white {
+  color: white;
+}
+
+/* يمكنك أيضًا تحديد أنماط أخرى للكلاس النشط إذا أردت */
+
 @keyframes crazyFlipInY {
   from {
     transform: perspective(1000px) rotateY(1080deg);
@@ -12,18 +28,6 @@
 .animate-crazy-flip {
   animation: crazyFlipInY 1.5s ease-out forwards;
 }
-function restartAnimation(elementId, animationClass) {
-    const el = document.getElementById(elementId);
-    if (!el) return;
-  
-    el.classList.remove(animationClass);
-  
-    // لإجبار إعادة التحديث
-    void el.offsetWidth;
-  
-    el.classList.add(animationClass);
-  }
-  
 
 #slider,
 #slider2,

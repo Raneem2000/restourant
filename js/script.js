@@ -18,7 +18,6 @@ const textOverlays = [
 ];
 
 setInterval(() => {
-  // تغيير السلايد
   slides.forEach((slide) => slide.classList.add("opacity-0"));
   slides.forEach((slide) => slide.classList.remove("opacity-100"));
 
@@ -33,17 +32,14 @@ setInterval(() => {
   textOverlays[currentSlide].classList.remove("hidden");
   textOverlays[currentSlide].classList.add("block");
 
-  // إعادة تشغيل الأنيميشن على النصوص
   restartAnimation("slideText1", "animate-crazy-flip");
   restartAnimation("slideText2", "animate-crazy-flip");
   restartAnimation("slideText3", "animate-crazy-flip");
   restartAnimation("slideText4", "animate-crazy-flip");
 
-  // تغيير السلايد
   currentSlide = (currentSlide + 1) % slides.length;
 }, 3000);
 
-// إعادة تشغيل الأنيميشن كل 3 ثوانٍ بشكل مستقل
 setInterval(() => {
   restartAnimation("slideText1", "animate-crazy-flip");
   restartAnimation("slideText2", "animate-crazy-flip");
@@ -187,3 +183,22 @@ function renderMenuItems(category) {
 }
 
 renderMenuItems("pizza");
+
+// navbar active link
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname.split("/").pop();
+  console.log("Current Path:", currentPath);
+
+  document.querySelectorAll("#navss a").forEach((link) => {
+    const linkPath = link.getAttribute("href").split("/").pop();
+    console.log("Link Path:", linkPath);
+
+    if (linkPath === currentPath) {
+      link.classList.add("text-active");
+      link.classList.remove("text-white");
+    } else {
+      link.classList.remove("text-active");
+      link.classList.add("text-white");
+    }
+  });
+});

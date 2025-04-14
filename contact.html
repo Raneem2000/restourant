@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Port+Lligat+Slab&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+      }
+
+      .leckerli {
+        font-family: "Leckerli One", cursive;
+      }
+      .port-slab {
+        font-family: "Port Lligat Slab", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#333333] text-white sm:text-lg md:text-xl w-full">
+    <div id="header"></div>
+    <!-- section 1 -->
+    <section class="flex flex-col md:flex-row h-screen w-full">
+      <div
+        class="md:w-1/2 w-full bg-[#FFAE00] flex flex-col items-center justify-center gap-5 md:gap-14 py-10"
+      >
+        <h2
+          class="leckerli max-w-80 text-lg md:text-2xl text-black text-center"
+        >
+          Call +1 414-421-0000 or fill out the booking form
+        </h2>
+        <button
+          class="text-xl md:text-2xl font-bold border border-black px-4 py-1 rounded-xl text-black hover:bg-black hover:text-[#FFAE00] transition"
+        >
+          BOOK A tABLE
+        </button>
+      </div>
+      <div class="md:w-1/2 w-full relative h-full">
+        <div class="z-10 flex flex-col items-center justify-center h-full">
+          <iframe
+            class="w-full h-full"
+            src="https://www.google.com/maps?q=41.9028,12.4964&hl=es;z=14&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- section 2 -->
+    <section class="w-full px-6 md:px-20 py-12 bg-[#262626] text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-6xl font-bold">Our Location</h2>
+          <p class="leckerli text-[#FFAE00] font-bold text-xl mb-6">
+            Be happy, eat pizza
+          </p>
+          <p
+            class="port-slab mx-auto text-[#A5A5A5] text-lg md:text-xl leading-relaxed mb-10"
+          >
+            Apparently we had reached a great height in the atmosphere, for the
+            sky was a dead black, and the stars had ceased to twinkle. By the
+            same illusion which lifts the horizon of the sea to the level of the
+            spectator on a hillside
+          </p>
+          <h2 class="text-2xl md:text-6xl font-semibold pt-6">Our Socials</h2>
+          <div class="flex gap-4 items-center">
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+            >
+              <img src="images/mdi_twitter.png" alt="Twitter" class="w-5 h-5" />
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+            >
+              <img
+                src="images/ri_facebook-fill.png"
+                alt="Facebook"
+                class="w-5 h-5"
+              />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+            >
+              <img src="images/mdi_twitter.png" alt="Twitter" class="w-5 h-5" />
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+            >
+              <img
+                src="images/ri_google-fill.svg"
+                alt="Google"
+                class="w-5 h-5"
+              />
+            </a>
+          </div>
+        </div>
+
+        <form class="space-y-6 text-lg text-[#848484] leckerli">
+          <div class="flex flex-col">
+            <label for="name" class="font-medium mb-1">YOUR NAME</label>
+            <input
+              type="text"
+              id="name"
+              class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="email" class="font-medium mb-1">YOUR EMAIL</label>
+            <input
+              type="email"
+              id="email"
+              class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="message" class="font-medium mb-1"
+              >Your message (optional)</label
+            >
+            <textarea
+              id="message"
+              rows="4"
+              class="border border-[#848484] bg-inherit px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-[#FFAE00] text-white font-semibold px-8 py-1.5 rounded-xl hover:bg-white hover:text-black transition"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+  <!-- JavaScript -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="/js/script.js"></script>
+</html>
