@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Port+Lligat+Slab&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+      }
+
+      .leckerli {
+        font-family: "Leckerli One", cursive;
+      }
+      .port-slab {
+        font-family: "Port Lligat Slab", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#333333] text-white sm:text-lg md:text-xl w-full">
+    <!-- section 1 -->
+    <section class="relative h-[400px] overflow-hidden">
+      <div
+        class="absolute inset-0 bg-cover bg-center opacity-45"
+        style="background-image: url('images/checkout-section.jpg')"
+      ></div>
+
+      <div id="header"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-45"></div>
+
+      <div
+        class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4"
+      >
+        <h2 class="uppercase text-5xl md:text-9xl">checkout</h2>
+        <img
+          id="slideText2"
+          src="images/2-white.png"
+          alt="Bottom Decoration"
+          class="absolute bottom-16 transform -translate-x-1/2 z-0 w-48 animate-crazy-flip"
+        />
+      </div>
+    </section>
+    <!-- section 2 -->
+    <section class="w-full px-6 md:px-20 py-12 bg-[#262626] text-white">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-6xl font-bold">Billing details</h2>
+          <form class="space-y-6 text-xl font-semibold text-[#848484]">
+            <!-- Full Name -->
+            <div class="flex flex-col">
+              <label for="fullName" class="mb-1">FULL NAME</label>
+              <input
+                type="text"
+                id="fullName"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col">
+              <label for="email" class="mb-1">EMAIL</label>
+              <input
+                type="email"
+                id="email"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- Phone -->
+            <div class="flex flex-col">
+              <label for="phone" class="mb-1">PHONE NUMBER</label>
+              <input
+                type="tel"
+                id="phone"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- Country -->
+            <div class="flex flex-col">
+              <label for="country" class="mb-1">COUNTRY</label>
+              <input
+                type="text"
+                id="country"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- City -->
+            <div class="flex flex-col">
+              <label for="city" class="mb-1">CITY</label>
+              <input
+                type="text"
+                id="city"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- Address -->
+            <div class="flex flex-col">
+              <label for="address" class="mb-1">ADDRESS</label>
+              <input
+                type="text"
+                id="address"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- Postal Code -->
+            <div class="flex flex-col">
+              <label for="postal" class="mb-1">POSTAL CODE</label>
+              <input
+                type="text"
+                id="postal"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              />
+            </div>
+
+            <!-- Payment Method -->
+            <div class="flex flex-col">
+              <label for="payment" class="mb-1">PAYMENT METHOD</label>
+              <select
+                id="payment"
+                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                required
+              >
+                <option value="">Select a payment method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+
+            <!-- Optional Notes -->
+            <div class="flex flex-col">
+              <label for="note" class="mb-1">ORDER NOTES (optional)</label>
+              <textarea
+                id="note"
+                rows="3"
+                class="border border-[#848484] bg-inherit px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="bg-[#FFAE00] uppercase text-2xl text-white font-semibold px-8 py-1.5 rounded-xl hover:bg-white hover:text-black transition"
+            >
+              Place Order
+            </button>
+          </form>
+        </div>
+        <div>
+          <h2 class="text-6xl font-bold mb-4">Your Order</h2>
+
+          <div class="overflow-x-auto my-12">
+            <table
+              class="w-full border border-[#848484] text-xl text-[#848484]"
+            >
+              <!-- Header Row -->
+              <thead>
+                <tr class="bg-[#FFAE00] text-white leckerli">
+                  <th class="text-left px-4 py-4">Product</th>
+                  <th class="text-left px-4 py-4">Subtotal</th>
+                </tr>
+              </thead>
+
+              <!-- Dynamic Rows -->
+              <tbody>
+                <!-- Example static row - بدليها بالداتا يلي عندك -->
+                <tr class="border-t border-[#848484]">
+                  <td class="px-4 py-3">Pizza Margherita</td>
+                  <td class="px-4 py-3">$12.00</td>
+                </tr>
+                <tr class="border-t border-[#848484]">
+                  <td class="px-4 py-3">Fresh Orange Juice</td>
+                  <td class="px-4 py-3">$4.50</td>
+                </tr>
+                <!-- نهاية الصفوف الديناميكية -->
+
+                <!-- Total Row -->
+                <tr class="border-t border-[#848484] font-bold leckerli">
+                  <td class="px-4 py-4">Total</td>
+                  <td class="px-4 py-4">$16.50</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </body>
+  <!-- JavaScript -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="/js/script.js"></script>
+</html>
