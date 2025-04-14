@@ -202,3 +202,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// menu toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menu-btn");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+  }
+});
