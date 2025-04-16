@@ -226,9 +226,13 @@
         />
       </div>
     </section>
-
     <!-- sectin 3 -->
-    <section class="bg-[#262626] bg-center text-white text-center py-16 px-4">
+    <div id="menu-content" class="hidden"></div>
+
+    <section
+      class="bg-cover bg-center text-white text-center py-16 px-4"
+      style="background-image: url('images/section5.jpg')"
+    >
       <img
         src="images/1-white.png"
         alt="Top Decoration"
@@ -251,220 +255,53 @@
         illusion which lifts the horizon of the sea to the level.
       </h2>
 
-      <!-- <div class="mb-6 flex items-center flex-col md:flex-row gap-4"> -->
-      <div class="w-full max-w-3xl px-4 mx-auto space-y-6">
+      <div class="w-full max-w-5xl mx-auto px-4 space-y-4">
         <h2 class="leckerli text-left text-2xl text-[#FF6200] md:text-4xl mb-6">
           Dessert
         </h2>
-        <!-- here get all data -->
-        <div
-          class="group flex flex-col sm:flex-row sm:justify-between sm:items-center border border-[#3a3a3a] rounded-2xl p-4 mb-6 bg-[#2A2A2A] hover:bg-[#2c2c2c] transition duration-300 shadow-md hover:shadow-xl"
-        >
-          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-            <div>
-              <h2
-                class="text-2xl sm:text-3xl font-bold text-white group-hover:text-[#FFAE00] transition"
+        <!-- here get all menu -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- first menu -->
+          <div>
+            <div class="flex justify-between items-center hover:text-[#FFAE00]">
+              <h1 class="text-3xl font-bold">Biggie Pizza</h1>
+
+              <button
+                onclick="addToCart(this)"
+                data-name="DWERCSDa Pizza"
+                data-price="30"
+                class="flex items-center justify-center gap-2 bg-[#2A2A2A] hover:text-black text-white font-semibold text-base sm:text-xl px-4 py-2 rounded-xl transition duration-300"
               >
-                Veggie Pizza
-              </h2>
+                <img src="/images/add-to-cart-svg.svg" alt="cart icon" />
+              </button>
+            </div>
+            <div class="border-t border-dashed border-[#adadad] my-2"></div>
+            <div class="flex items-center justify-between">
+              <h3 class="port-slab text-xs text-left">
+                coffee, mascarpone, cocoa
+              </h3>
               <p
-                class="text-[#FFAE00] text-lg sm:text-xl font-semibold leckerli mt-1"
+                class="text-[#cfdf5a] text-lg sm:text-xl font-semibold leckerli mt-1"
               >
                 $22.00
               </p>
             </div>
           </div>
-
-          <button
-            onclick="addToCart(this)"
-            data-name="Veggie Pizza"
-            data-price="22"
-            class="sm:mt-0 flex items-center justify-center shadow-lg gap-2 text-[#FFAE00] bg-[#262626] hover:text-white px-6 py-4 rounded-xl font-semibold text-base sm:text-lg leckerli transition duration-300"
-          >
-            <span>Add to Cart</span>
-
-            <img
-              src="/images/icons8-add-to-cart-50 (1).png"
-              class="w-5 sm:w-8"
-              alt="Cart icon"
-            />
-          </button>
         </div>
-        <div
-          class="group flex flex-col sm:flex-row sm:justify-between sm:items-center border border-[#3a3a3a] rounded-2xl p-4 mb-6 bg-[#2A2A2A] hover:bg-[#2c2c2c] transition duration-300 shadow-md hover:shadow-xl"
-        >
-          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-            <div>
-              <h2
-                class="text-2xl sm:text-3xl font-bold text-white group-hover:text-[#FFAE00] transition"
-              >
-                Veggie Pizza
-              </h2>
-              <p
-                class="text-[#FFAE00] text-lg sm:text-xl font-semibold leckerli mt-1"
-              >
-                $22.00
-              </p>
-            </div>
-          </div>
-
-          <button
-            onclick="addToCart(this)"
-            data-name="Veggie Pizza"
-            data-price="22"
-            class="sm:mt-0 flex items-center justify-center shadow-lg gap-2 text-[#FFAE00] bg-[#262626] hover:text-white px-6 py-4 rounded-xl font-semibold text-base sm:text-lg leckerli transition duration-300"
-          >
-            <span>Add to Cart</span>
-
-            <img
-              src="/images/icons8-add-to-cart-50 (1).png"
-              class="w-5 sm:w-8"
-              alt="Cart icon"
-            />
-          </button>
-        </div>
-        <div
-          class="group flex flex-col sm:flex-row sm:justify-between sm:items-center border border-[#3a3a3a] rounded-2xl p-4 mb-6 bg-[#2A2A2A] hover:bg-[#2c2c2c] transition duration-300 shadow-md hover:shadow-xl"
-        >
-          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-            <div>
-              <h2
-                class="text-2xl sm:text-3xl font-bold text-white group-hover:text-[#FFAE00] transition"
-              >
-                Veggie Pizza
-              </h2>
-              <p
-                class="text-[#FFAE00] text-lg sm:text-xl font-semibold leckerli mt-1"
-              >
-                $22.00
-              </p>
-            </div>
-          </div>
-
-          <button
-            onclick="addToCart(this)"
-            data-name="Veggie Pizza"
-            data-price="22"
-            class="sm:mt-0 flex items-center justify-center shadow-lg gap-2 text-[#FFAE00] bg-[#262626] hover:text-white px-6 py-4 rounded-xl font-semibold text-base sm:text-lg leckerli transition duration-300"
-          >
-            <span>Add to Cart</span>
-
-            <img
-              src="/images/icons8-add-to-cart-50 (1).png"
-              class="w-5 sm:w-8"
-              alt="Cart icon"
-            />
-          </button>
-        </div>
-        <div
-          class="group flex flex-col sm:flex-row sm:justify-between sm:items-center border border-[#3a3a3a] rounded-2xl p-4 mb-6 bg-[#2A2A2A] hover:bg-[#2c2c2c] transition duration-300 shadow-md hover:shadow-xl"
-        >
-          <!-- Info -->
-          <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-            <!-- صورة المنتج (اختياري) -->
-
-            <!-- الاسم والسعر -->
-            <div>
-              <h2
-                class="text-2xl sm:text-3xl font-bold text-white group-hover:text-[#FFAE00] transition"
-              >
-                Veggie Pizza
-              </h2>
-              <p
-                class="text-[#FFAE00] text-lg sm:text-xl font-semibold leckerli mt-1"
-              >
-                $22.00
-              </p>
-            </div>
-          </div>
-
-          <!-- زر الإضافة -->
-          <button
-            onclick="addToCart(this)"
-            data-name="Veggie Pizza"
-            data-price="22"
-            class="sm:mt-0 flex items-center justify-center shadow-lg gap-2 text-[#FFAE00] bg-[#262626] hover:bg-[#FFAE00] hover:text-black px-6 py-4 rounded-xl font-semibold text-base sm:text-lg leckerli transition duration-300"
-          >
-            <img
-              src="/images/shopping-cart.png"
-              class="w-5 sm:w-6"
-              alt="Cart icon"
-            />
-            <span>Add to Cart</span>
-          </button>
-        </div>
-
         <h2 class="leckerli text-left text-2xl text-[#FF6200] md:text-4xl mb-6">
           Dessert
         </h2>
-
-        <div
-          class="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-gray-500 border-dashed pb-4 mb-4 gap-4"
-        >
-          <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-            <h1 class="text-2xl sm:text-3xl font-bold text-white">
-              Veggie Pizza
-            </h1>
-            <span
-              class="leckerli text-[#FFAE00] text-lg sm:text-xl font-semibold sm:ml-4"
-            >
-              $ 22
-            </span>
-          </div>
-
-          <button
-            onclick="addToCart(this)"
-            data-name="Apparently Pizza"
-            data-price="42"
-            class="flex items-center justify-center gap-2 border border-[#FFAE00] bg-[#2A2A2A] hover:text-black hover:bg-white text-white font-semibold text-base sm:text-xl px-4 py-2 rounded-xl transition duration-300"
-          >
-            <img
-              src="/images/shopping-cart.png"
-              class="w-5 sm:w-6"
-              alt="cart icon"
-            />
-            <span>Add to Cart</span>
-          </button>
-        </div>
-        <div
-          class="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b border-gray-500 border-dashed pb-4 mb-4 gap-4"
-        >
-          <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-            <h1 class="text-2xl sm:text-3xl font-bold text-white">
-              Veggie Pizza
-            </h1>
-            <span
-              class="leckerli text-[#FFAE00] text-lg sm:text-xl font-semibold sm:ml-4"
-            >
-              $ 22
-            </span>
-          </div>
-
-          <button
-            onclick="addToCart(this)"
-            data-name="Chicago Pizza"
-            data-price="35"
-            class="flex items-center justify-center gap-2 border border-[#FFAE00] bg-[#2A2A2A] hover:text-black hover:bg-white text-white font-semibold text-base sm:text-xl px-4 py-2 rounded-xl transition duration-300"
-          >
-            <img
-              src="/images/shopping-cart.png"
-              class="w-5 sm:w-6"
-              alt="cart icon"
-            />
-            <span>Add to Cart</span>
-          </button>
-        </div>
       </div>
     </section>
     <!-- section 4 -->
 
     <section class="relative h-[400px] md:h-screen w-full">
       <img
-        src="images/section7.jpg"
+        src="images/ABOUT 5.jpg"
         alt="Pizza Quality"
-        class="absolute inset-0 w-full h-full"
+        class="absolute inset-0 w-full h-full object-contain"
       />
-      <div class="absolute inset-0 bg-black bg-opacity-75"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
       <div
         class="relative z-10 flex flex-col gap-5 md:gap-10 items-center justify-center py-4 text-center h-full text-white px-4"
       >
