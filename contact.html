@@ -25,140 +25,156 @@
       }
     </style>
   </head>
-  <body class="bg-[#333333] text-white sm:text-lg md:text-xl w-full">
-    <header
-      class="text-2xl font-bold relative z-20 bg-black bg-opacity-10 flex justify-between items-center px-4 md:px-10 py-5 shadow-sm"
-    >
-      <!-- Logo -->
-      <div class="text-white text-xl md:text-3xl font-bold">Logo</div>
-
-      <!-- Hamburger button (Mobile) -->
-      <button
-        id="menu-btn"
-        class="md:hidden text-white focus:outline-none text-2xl"
-      >
-        ☰
-      </button>
-
-      <!-- Navigation Menu -->
-      <ul
-        id="nav-menu"
-        class="transition-all duration-300 transform scale-100 md:scale-100 origin-top hidden md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[#2A2A2A] opacity-90 md:bg-transparent md:space-x-0 divide-y md:divide-none divide-white/30 md:divide-x md:flex divide-dotted md:items-center"
-      >
-        <li class="px-4 md:px-8 py-3 md:py-0">
-          <a href="index.html" class="text-[#FFB30E] hover:text-[#FFB30E]"
-            >Home</a
-          >
-        </li>
-        <li class="px-4 md:px-8 py-3 md:py-0">
-          <a href="menu.html" class="text-white hover:text-[#FFB30E]">Menu</a>
-        </li>
-        <li class="px-4 md:px-8 py-3 md:py-0">
-          <a href="about.html" class="text-white hover:text-[#FFB30E]"
-            >About Us</a
-          >
-        </li>
-        <li class="px-4 md:px-8 py-3 md:py-0">
-          <a href="contact.html" class="text-white hover:text-[#FFB30E]"
-            >Contact Us</a
-          >
-        </li>
-      </ul>
-
-      <!-- Order Button -->
-      <button
-        class="hidden md:block border border-white px-5 py-1.5 rounded-xl text-white hover:bg-white hover:text-black transition-all"
-      >
-        Order Online
-      </button>
-    </header>
-    <!-- section 1 -->
-    <section class="flex flex-col md:flex-row h-screen w-full">
+  <body class="bg-black text-white text-sm sm:text-lg md:text-xl w-full">
+    <section class="relative h-[400px] overflow-hidden">
+      <!-- section 1 -->
       <div
-        class="md:w-1/2 w-full bg-[#FFAE00] flex flex-col items-center justify-center gap-5 md:gap-14 py-10"
+        class="absolute inset-0 opacity-50 transition-all duration-1000 bg-cover bg-center"
+        style="background-image: url('images/menu-background.jpg')"
+      ></div>
+
+      <header
+        class="text-2xl font-bold relative z-20 bg-[#2A2A2A] bg-opacity-40 flex justify-between items-center px-4 md:px-10 py-5 shadow-sm"
       >
-        <h2
-          class="leckerli max-w-80 text-lg md:text-2xl text-black text-center"
-        >
-          Call +1 414-421-0000 or fill out the booking form
-        </h2>
+        <!-- Logo -->
+        <div class="text-white text-xl md:text-3xl font-bold">Logo</div>
+
+        <!-- Hamburger button (Mobile) -->
         <button
-          class="text-xl md:text-2xl font-bold border border-black px-4 py-1 rounded-xl text-black hover:bg-black hover:text-[#FFAE00] transition"
+          id="menu-btn"
+          class="md:hidden text-white focus:outline-none text-2xl"
         >
-          BOOK A tABLE
+          ☰
         </button>
-      </div>
-      <div class="md:w-1/2 w-full relative h-full">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2513.2805440739753!2d12.498974924544813!3d41.902799971239055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDU0JzEwLjEiTiAxMsKwMjknNDcuMCJF!5e1!3m2!1sar!2slv!4v1744720966392!5m2!1sar!2slv"
-          class="w-full h-full"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </section>
-    <!-- section 2 -->
-    <section class="w-full px-6 md:px-20 py-12 bg-[#262626] text-white">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+        <!-- Navigation Menu -->
+        <ul
+          id="nav-menu"
+          class="transition-all duration-300 transform scale-100 md:scale-100 origin-top hidden md:flex flex-col md:flex-row absolute md:static top-full left-0 w-full md:w-auto bg-[#2A2A2A] opacity-90 md:bg-transparent md:space-x-0 divide-y md:divide-none divide-white/30 md:divide-x md:flex divide-dotted md:items-center"
+        >
+          <li class="px-4 md:px-8 py-3 md:py-0">
+            <a href="index.html" class="text-[#FFB30E] hover:text-[#FFB30E]"
+              >Home</a
+            >
+          </li>
+          <li class="px-4 md:px-8 py-3 md:py-0">
+            <a href="menu.html" class="text-white hover:text-[#FFB30E]">Menu</a>
+          </li>
+          <li class="px-4 md:px-8 py-3 md:py-0">
+            <a href="about.html" class="text-white hover:text-[#FFB30E]"
+              >About Us</a
+            >
+          </li>
+          <li class="px-4 md:px-8 py-3 md:py-0">
+            <a href="contact.html" class="text-white hover:text-[#FFB30E]"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <!-- Order Button -->
+        <button
+          class="hidden md:block border border-white px-5 py-1.5 rounded-xl text-white hover:bg-white hover:text-black transition-all"
+        >
+          Order Online
+        </button>
+      </header>
+      <div
+        class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4"
+      >
         <div class="space-y-4">
-          <h2 class="text-3xl md:text-6xl font-bold">Our Location</h2>
+          <h2 class="text-3xl md:text-6xl font-bold">Contact Us</h2>
           <p class="leckerli text-[#FFAE00] font-bold text-xl mb-6">
             Be happy, eat pizza
           </p>
           <p
-            class="port-slab mx-auto text-[#A5A5A5] text-lg md:text-xl leading-relaxed mb-10"
+            class="port-slab mx-auto max-w-2xl text-[#A5A5A5] text-lg md:text-xl leading-relaxed mb-10"
           >
             Apparently we had reached a great height in the atmosphere, for the
             sky was a dead black, and the stars had ceased to twinkle. By the
-            same illusion which lifts the horizon of the sea to the level of the
-            spectator on a hillside
+            same illusion.
           </p>
-          <h2 class="text-2xl md:text-6xl font-semibold pt-6">Our Socials</h2>
-          <div class="flex gap-4 items-center">
-            <a
-              href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
-            >
-              <img src="images/mdi_twitter.png" alt="Twitter" class="w-5 h-5" />
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
-            >
-              <img
-                src="images/ri_facebook-fill.png"
-                alt="Facebook"
-                class="w-5 h-5"
-              />
-            </a>
-            <a
-              href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
-            >
-              <img src="images/mdi_twitter.png" alt="Twitter" class="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
-            >
-              <img
-                src="images/ri_google-fill.svg"
-                alt="Google"
-                class="w-5 h-5"
-              />
-            </a>
-          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full px-6 md:px-20 py-10 bg-[#2A2A2A] text-white">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+        <div>
+          <img src="images/location-pin-svgrepo-com.svg" class="w-7 h-7 mb-4" />
+          <h2 class="text-2xl font-extrabold text-white mb-2">Our Location</h2>
+          <p class="text-sm text-[#adadad] leading-relaxed">
+            Call +1 414-421-0000 or fill out the booking
+          </p>
         </div>
 
-        <form class="space-y-6 text-lg text-[#848484] leckerli">
+        <div>
+          <img src="images/phone-svgrepo-com.svg" class="w-7 h-7 mb-4" />
+          <h2 class="text-2xl font-extrabold text-white mb-2">Call Us</h2>
+          <p class="text-sm text-[#adadad] leading-relaxed">+1 414-421-0000</p>
+        </div>
+
+        <div>
+          <img src="images/email-9-svgrepo-com (1).svg" class="w-7 h-7 mb-4" />
+          <h2 class="text-2xl font-extrabold text-white mb-2">Email Us</h2>
+          <p class="text-sm text-[#adadad] leading-relaxed">
+            info@pizzastore.com
+          </p>
+        </div>
+
+        <div>
+          <img src="images/time-svgrepo-com.svg" class="w-7 h-7 mb-4" />
+          <h2 class="text-2xl font-extrabold text-white mb-2">Open Hours</h2>
+          <p class="text-sm text-[#adadad] leading-relaxed">
+            Monday - Saturday
+          </p>
+          <p class="text-sm text-[#adadad] leading-relaxed">
+            10:00 AM - 5:00 PM
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section 1 -->
+    <section class="grid grid-cols-2 md:flex-row h-screen w-full bg-[#262626]">
+      <div class="p-8 space-y-4">
+        <h2 class="text-2xl md:text-6xl font-semibold pt-6">Our Socials</h2>
+        <div class="flex gap-4 items-center">
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+          >
+            <img src="images/mdi_twitter.png" alt="Twitter" class="w-5 h-5" />
+          </a>
+
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+          >
+            <img
+              src="images/ri_facebook-fill.png"
+              alt="Facebook"
+              class="w-5 h-5"
+            />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+          >
+            <img src="images/mdi_twitter.png" alt="Twitter" class="w-5 h-5" />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-[#FFAE00] transition-all duration-300 hover:bg-white hover:scale-110 shadow-md"
+          >
+            <img src="images/ri_google-fill.svg" alt="Google" class="w-5 h-5" />
+          </a>
+        </div>
+        <form class="space-y-6 text-[15px] text-[#848484] leckerli">
           <div class="flex flex-col">
             <label for="name" class="font-medium mb-1">YOUR NAME</label>
             <input
               type="text"
               id="name"
-              class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+              class="border border-[#848484] rounded-lg bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
             />
           </div>
 
@@ -167,18 +183,18 @@
             <input
               type="email"
               id="email"
-              class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+              class="border border-[#848484] rounded-lg bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
             />
           </div>
 
-          <div class="flex flex-col">
+          <div class="flex flex-col text-[15px] uppercase">
             <label for="message" class="font-medium mb-1"
               >Your message (optional)</label
             >
             <textarea
               id="message"
               rows="4"
-              class="border border-[#848484] bg-inherit px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+              class="border border-[#848484] rounded-lg bg-inherit px-4 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
             ></textarea>
           </div>
 
@@ -189,6 +205,15 @@
             Submit
           </button>
         </form>
+      </div>
+      <div class="w-full relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2513.2805440739753!2d12.498974924544813!3d41.902799971239055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDU0JzEwLjEiTiAxMsKwMjknNDcuMCJF!5e1!3m2!1sar!2slv!4v1744720966392!5m2!1sar!2slv"
+          class="w-full h-full"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
 
