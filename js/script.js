@@ -316,3 +316,14 @@ function toggleSidebar(show = null) {
     if (overlay) overlay.classList.toggle("hidden");
   }
 }
+//open visa card form
+function handlePaymentChange() {
+  const selected = document.getElementById("payment").value;
+  const visaForm = document.getElementById("visaForm");
+
+  if (selected === "visa") {
+    visaForm.classList.remove("hidden");
+  } else {
+    visaForm.classList.add("hidden");
+  }
+}

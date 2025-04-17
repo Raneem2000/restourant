@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Port+Lligat+Slab&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <style>
       body {
         font-family: "Yanone Kaffeesatz", sans-serif;
@@ -100,7 +105,7 @@
     <section class="w-full px-6 md:px-20 py-10 bg-[#2A2A2A] text-white">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
         <div>
-          <img src="images/location-pin-svgrepo-com.svg" class="w-7 h-7 mb-4" />
+          <i class="fas fa-map-marker-alt text-xl mb-4"></i>
           <h2 class="text-xl text-[#cfdf5a] font-extrabold mb-2 port-slab">
             Our Location
           </h2>
@@ -110,7 +115,7 @@
         </div>
 
         <div>
-          <img src="images/phone-svgrepo-com.svg" class="w-7 h-7 mb-4" />
+          <i class="fas fa-phone text-xl mb-4"></i>
           <h2 class="text-xl text-[#cfdf5a] font-extrabold mb-2 port-slab">
             Call Us
           </h2>
@@ -118,7 +123,7 @@
         </div>
 
         <div>
-          <img src="images/email-9-svgrepo-com (1).svg" class="w-7 h-7 mb-4" />
+          <i class="far fa-envelope text-xl mb-4"></i>
           <h2 class="text-xl text-[#cfdf5a] font-extrabold mb-2 port-slab">
             Email Us
           </h2>
@@ -126,7 +131,7 @@
         </div>
 
         <div>
-          <img src="images/time-svgrepo-com.svg" class="w-7 h-7 mb-4" />
+          <i class="far fa-clock text-xl mb-4"></i>
           <h2 class="text-xl text-[#cfdf5a] font-extrabold mb-2 port-slab">
             Open Hours
           </h2>
@@ -170,8 +175,8 @@
             <img src="images/ri_google-fill.svg" alt="Google" class="w-5 h-5" />
           </a>
         </div>
-        <form class="space-y-6 text-[15px] text-[] leckerli">
-          <div class="flex flex-col">
+        <form class="space-y-6 text-[15px]">
+          <div class="flex flex-col leckerli">
             <label for="name" class="font-medium mb-1">YOUR NAME</label>
             <input
               type="text"
@@ -180,7 +185,7 @@
             />
           </div>
 
-          <div class="flex flex-col">
+          <div class="flex flex-col leckerli">
             <label for="email" class="font-medium mb-1">YOUR EMAIL</label>
             <input
               type="email"
@@ -189,7 +194,7 @@
             />
           </div>
 
-          <div class="flex flex-col text-[15px] uppercase">
+          <div class="flex flex-col text-[15px] uppercase leckerli">
             <label for="message" class="font-medium mb-1"
               >Your message (optional)</label
             >
@@ -202,14 +207,14 @@
 
           <button
             type="submit"
-            class="bg-[#FFAE00] port-slab text-xl text-white font-semibold px-8 py-1.5 rounded-xl hover:bg-white hover:text-black transition"
+            class="text-2xl w-full font-bold border border-[#FFAE00] px-5 py-1.5 rounded-xl text-[#FFAE00] hover:bg-white hover:text-black transition-all"
           >
             Submit
           </button>
         </form>
       </div>
       <div
-        class="my-auto p-2 w-full md:w-5/6 shadow-lg h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg"
+        class="my-auto mx-auto rounded-lg p-2 w-full md:w-5/6 shadow-lg h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2513.2805440739753!2d12.498974924544813!3d41.902799971239055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDU0JzEwLjEiTiAxMsKwMjknNDcuMCJF!5e1!3m2!1sar!2slv!4v1744720966392!5m2!1sar!2slv"

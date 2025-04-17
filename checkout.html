@@ -82,15 +82,21 @@
       <div class="absolute inset-0 bg-black bg-opacity-45"></div>
 
       <div
-        class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4"
+        class="relative z-10 font-bold h-full flex flex-col justify-center items-center text-center text-white px-4"
       >
-        <h2 class="uppercase text-5xl md:text-9xl">checkout</h2>
-        <img
-          id="slideText2"
-          src="images/2-white.png"
-          alt="Bottom Decoration"
-          class="absolute bottom-16 transform -translate-x-1/2 z-0 w-48 animate-crazy-flip"
-        />
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-6xl leckerli">Checkout</h2>
+          <p class="leckerli text-[#FFAE00] text-xl mb-6">
+            Be happy, eat pizza
+          </p>
+          <p
+            class="port-slab mx-auto max-w-2xl text-[#A5A5A5] text-lg md:text-xl leading-relaxed mb-10"
+          >
+            Apparently we had reached a great height in the atmosphere, for the
+            sky was a dead black, and the stars had ceased to twinkle. By the
+            same illusion.
+          </p>
+        </div>
       </div>
     </section>
     <!-- section 2 -->
@@ -98,7 +104,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div class="space-y-4">
           <h2 class="text-4xl md:text-5xl font-bold">Billing details</h2>
-          <form class="space-y-6 text-xl font-semibold text-[#848484]">
+          <form class="space-y-6 text-xl font-semibold">
             <!-- Full Name -->
             <div class="flex flex-col">
               <label for="fullName" class="mb-1">FULL NAME</label>
@@ -176,19 +182,6 @@
               />
             </div>
 
-            <!-- Payment Method -->
-            <div class="flex flex-col">
-              <label for="payment" class="mb-1">PAYMENT METHOD</label>
-              <select
-                id="payment"
-                class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
-                required
-              >
-                <option value="">Select a payment method</option>
-                <option value="credit-card">Visa Card</option>
-              </select>
-            </div>
-
             <!-- Optional Notes -->
             <div class="flex flex-col">
               <label for="note" class="mb-1">ORDER NOTES (optional)</label>
@@ -200,21 +193,90 @@
             </div>
 
             <!-- Submit Button -->
-            <button
-              type="submit"
-              class="bg-[#FFAE00] uppercase text-2xl text-white font-semibold px-8 py-1.5 rounded-xl hover:bg-white hover:text-black transition"
+            <a
+              href="thanks.html"
+              class="block w-fit text-2xl uppercase border border-[#FFAE00] px-5 py-1.5 rounded-xl text-[#FFAE00] hover:bg-white hover:text-black transition-all"
             >
               Place Order
-            </button>
+            </a>
           </form>
         </div>
         <div>
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Your Order</h2>
-
-          <div class="overflow-x-auto my-12">
-            <table
-              class="w-full border border-[#848484] text-xl text-[#848484]"
+          <!-- Payment Method -->
+          <div class="flex flex-col">
+            <label for="payment" class="mb-1">PAYMENT METHOD</label>
+            <select
+              id="payment"
+              class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+              required
+              onchange="handlePaymentChange()"
             >
+              <option class="bg-[#2A2A2A]" value="">
+                Select a payment method
+              </option>
+              <option class="bg-[#2A2A2A]" value="visa">Visa Card</option>
+              <option class="bg-[#2A2A2A]" value="master">Master Card</option>
+            </select>
+          </div>
+
+          <!-- Visa Card Form -->
+          <div id="visaForm" class="hidden">
+            <h2
+              class="text-3xl font-bold text-center mt-10 mb-5 text-[#cfdf5a]"
+            >
+              Visa Card Details
+            </h2>
+
+            <div class="space-y-6">
+              <div class="flex flex-col">
+                <label for="cardnumber" class="mb-1">Card Number</label>
+                <input
+                  type="text"
+                  id="cardnumber"
+                  placeholder="1234 5678 9012 3456"
+                  class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                  required
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="cardholder" class="mb-1">CardHolder Name</label>
+                <input
+                  type="text"
+                  id="cardholder"
+                  placeholder="Your Name"
+                  class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                  required
+                />
+              </div>
+
+              <div class="flex gap-4 items-center w-full">
+                <div class="flex flex-col w-1/2">
+                  <label for="expiry" class="mb-1">Expiry Date</label>
+                  <input
+                    type="text"
+                    id="expiry"
+                    placeholder="MM/YY"
+                    class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                  />
+                </div>
+                <div class="flex flex-col w-1/2">
+                  <label for="cvv" class="block mb-1">CVV</label>
+                  <input
+                    type="password"
+                    id="cvv"
+                    placeholder="123"
+                    class="border border-[#848484] bg-inherit px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#FFAE00]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="text-4xl md:text-5xl font-bold mt-10">Your Order</h2>
+
+          <div class="overflow-x-auto my-4">
+            <table class="w-full border border-[#848484] text-xl">
               <!-- Header Row -->
               <thead>
                 <tr class="bg-[#FFAE00] text-white leckerli">
