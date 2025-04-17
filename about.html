@@ -27,13 +27,13 @@
   </head>
   <body class="bg-[#333333] text-white text-sm sm:text-lg md:text-xl w-full">
     <!-- section 1 -->
-    <section class="relative h-screen overflow-hidden">
+    <section class="relative h-[400px] overflow-hidden">
+      <!-- section 1 -->
       <div
-        class="absolute inset-0 bg-cover bg-center"
-        style="background-image: url('images/about-1.jpg')"
+        class="absolute inset-0 opacity-40 text-black transition-all duration-1000 bg-cover bg-center"
+        style="background-image: url('images/section1-first-slide.svg')"
       ></div>
 
-      <!-- header -->
       <header
         class="text-2xl font-bold relative z-20 bg-[#2A2A2A] bg-opacity-40 flex justify-between items-center px-4 md:px-10 py-5 shadow-sm"
       >
@@ -80,32 +80,25 @@
           Order Online
         </button>
       </header>
-      <div class="absolute inset-0 bg-black bg-opacity-45"></div>
-
       <div
-        class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-4"
+        class="relative z-10 font-bold h-full flex flex-col justify-center items-center text-center text-white px-4"
       >
-        <img
-          id="slideText1"
-          src="images/1-white.png"
-          alt="Top Decoration"
-          class="absolute top-6 transform -translate-x-1/2 z-0 w-48 animate-crazy-flip"
-        />
-        <div
-          class="max-w-2 font-extrabold text-center flex flex-col items-center"
-        >
-          <h2 class="uppercase text-7xl">
-            <span class="text-9xl">WE</span> have <br />a great history
-          </h2>
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-6xl leckerli">About Us</h2>
+          <p class="leckerli text-[#FFAE00] text-xl mb-6">
+            WE have a great history
+          </p>
+          <p
+            class="port-slab mx-auto max-w-2xl text-[#A5A5A5] text-lg md:text-xl leading-relaxed mb-10"
+          >
+            Apparently we had reached a great height in the atmosphere, for the
+            sky was a dead black, and the stars had ceased to twinkle. By the
+            same illusion.
+          </p>
         </div>
-        <img
-          id="slideText2"
-          src="images/2-white.png"
-          alt="Bottom Decoration"
-          class="absolute bottom-16 transform -translate-x-1/2 z-0 w-48 animate-crazy-flip"
-        />
       </div>
     </section>
+
     <!-- section 2 -->
     <section
       class="relative bg-black text-center text-white pt-20 h-full w-full px-4 bg-cover bg-center"
